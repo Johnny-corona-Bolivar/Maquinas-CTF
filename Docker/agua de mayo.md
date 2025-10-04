@@ -5,12 +5,13 @@
 ### 1. ESCANEO
 
 - Podemos identificar el sistema operativo de la maquina, que eso nos podrá ayudar en un futuro a tomar decisiones o buscar vulnerabilidades, para ello ponemos el comando:
-
+  
+  
 ``ping -c 1 172.17.0.2``
 
 
 - Ahora, hemos de escanear cuales son los puertos abiertos de la maquina, para ello, ejecutamos el siguiente comando:
-- 
+  
 `nmap -p- --open --min-rate=5000 -T5 -A -sT -Pn -n -v 172.17.0.2 ` 
 
 
@@ -25,20 +26,24 @@
 Veremos que hay un directorio que de llama images, lo copiaremos al navegador y veremos que tenemos una imagen que se llama agua_ssh, la descargamos a nuestro ordenador para posteriormente analizarla.
  
 
-- Para ver los metadatos podemos usar varias maneras, una de ellas es ExIFTOOL, ``exiftool + ( archivo.jpg ) ´´
+- Para ver los metadatos podemos usar varias maneras, una de ellas es ExIFTOOL,
 
-- Para alistar caracteres imprimibles que tiene la imagen usaremos STRINGS `` strings + ( archivo.jpg ) ´´
+  ``exiftool + ( archivo.jpg )``
+
+- Para alistar caracteres imprimibles que tiene la imagen usaremos STRINGS
+
+  `` strings + ( archivo.jpg ) ``
 
 
 - Para ver si hay algún archivo oculto en la imagen usamos el siguiente comando:
 
- `` steghide info agua_ssh.jpg ´´ YES
+ `` steghide info agua_ssh.jpg `` YES
 
 ### 2. Acceso
 
 - ahora nos conectaremos atraves del SSH, utilizaremos el nombre de la imagen que este en el directorio previamente encontrado. la imagen se llama agua_shh, y utilizaremos la clave que nos dio al momento de resolver el codigo brain fuck:  bebeaguaqueessano
 
-- ssh agua@172.17.0.2 al pedir la contraseña usamos bebeaguaqueessano
+      ``ssh agua@172.17.0.2 al pedir la contraseña usamos bebeaguaqueessano
 
 
 - Una vez con acceso tenemos que elevar privilegios, para ello podemos hace un `` sudo -l`` para ver que comandos puede ejecutar este usuario. Vemos que tenemos un binario que se llama bettercap que podemos ejecutar, por lo tanto ponemos `` sudo bettercap``
