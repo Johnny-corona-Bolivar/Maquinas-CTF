@@ -1,6 +1,8 @@
 
 ## Nombre: Agua De Mayo
 
+#### Dificultad : Facil
+
 ### 1. ESCANEO
 
 - Podemos identificar el sistema operativo de la maquina, que eso nos podrá ayudar en un futuro a tomar decisiones o buscar vulnerabilidades, para ello ponemos el comando:
