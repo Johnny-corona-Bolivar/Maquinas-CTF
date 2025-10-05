@@ -1,4 +1,4 @@
-# Maquinas-CTF -- click on the folder Docker
+# Maquinas-CTF -- click on any folder
 
 ---
 These machines were created to provide a safe and structured environment for practicing ethical hacking techniques, gaining hands-on experience, and showcasing the knowledge acquired throughout the learning journey
