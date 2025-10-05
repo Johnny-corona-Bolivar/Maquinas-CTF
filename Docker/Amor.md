@@ -1,5 +1,7 @@
 ## Nombre: Amor
 
+#### Dificultad : Facil
+
 1.ESCANEO
 
 Lo primero, hacemos un ping a la maquina para comprobar la conexión:
